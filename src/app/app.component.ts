@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component } from '@angular/core';
 import { MatTabChangeEvent } from '@angular/material/tabs';
 import { NotifierService } from './notifier.service';
 
@@ -7,14 +7,11 @@ import { NotifierService } from './notifier.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit {
+export class AppComponent implements AfterViewInit {
   tabGroup: any;
   constructor(private notifierService: NotifierService) {}
   ngAfterViewInit(): void {
     console.log('tabChangeEvent')
-  }
-  ngOnInit(): void {
-    console.log("tabGroup selected")
   }
 
   openSnackBar() {

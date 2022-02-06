@@ -1,0 +1,15 @@
+<form class="example-container" [formGroup]="emailList">
+  <mat-form-field appearance="fill">
+    <mat-label>Enter your email</mat-label>
+    <input matInput placeholder="username@domain.com" formControlName="email" type="text" name="email"required>
+    <mat-error *ngIf="emailList.get('email')?.hasError('required')">Required</mat-error>
+    <mat-error *ngIf="emailList.get('email')?.hasError('pattern')">Invalid email</mat-error>
+  </mat-form-field>
+  <br>
+  <button mat-button (click)="submit()">Submit</button>
+</form>
+<ng-container *ngIf="isWaiting">
+  <div class="overlay">
+    <mat-progress-spinner mode="indeterminate"></mat-progress-spinner>
+  </div>
+</ng-container>

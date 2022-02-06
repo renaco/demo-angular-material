@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -10,13 +10,19 @@ import { ItemOneComponent } from './item-one/item-one.component';
 import { ItemTwoComponent } from './item-two/item-two.component';
 import { ItemThreeComponent } from './item-three/item-three.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
-
+import { ContactComponent } from './contact/contact.component';
+import { MatInputModule} from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatButtonModule } from '@angular/material/button';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
     ItemOneComponent,
     ItemTwoComponent,
-    ItemThreeComponent
+    ItemThreeComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -24,9 +30,15 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BrowserAnimationsModule,
     MatSliderModule,
     MatTabsModule,
-    MatSnackBarModule
+    MatInputModule,
+    MatFormFieldModule,
+    MatButtonModule,
+    MatSnackBarModule,
+    MatProgressSpinnerModule,
+    ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [NO_ERRORS_SCHEMA],
 })
 export class AppModule { }
