@@ -28,10 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Test sonarqube
 
-```bash
-sonar-scanner \
-  -Dsonar.projectKey=demo-default \
-  -Dsonar.sources=. \
-  -Dsonar.host.url=http://localhost:9000 \
-  -Dsonar.login=43a79f41eb5929592711f9bc3e8cfe6025555aa0
-```
+
